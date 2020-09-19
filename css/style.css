@@ -1,0 +1,72 @@
+:root {
+    --basic-black: #000000;
+    --basic-black-light:  #333333;
+    --basic-black-rating: #666666;
+    --basic-white: #ffffff;
+    --basic-blue:  #81B3D2; 
+    --basic-gray:  #EEEEEE;
+    --basic-gray-dark: #888888;
+    --basic-gray-ligth: #F2F2F2;
+    --basic-brown: #766357;
+
+}
+
+body {
+    min-width: 1200px;
+    margin: 0;
+    padding: 0;
+    font-family: "PT Sans", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 700; 
+    color: var(--basic-black);
+    text-transform: uppercase;
+    background-color: var(--basic-white);
+}
+
+.page a {
+    text-decoration: none;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .main-navigation {
+    font-size: 14px;
+    line-height: 26px;
+    color: var(--basic-black);
+    background-color: transparent;
+  }
+
+ .site-navigation a{
+    color: var(--basic-black)
+ } 
+
+  .features-list {
+    list-style: none;
+  }
+
+  .feature {
+    text-align: center;
+  }
+
+  .feature h1{
+    font-size: 21px;
+    line-height: 26px;
+  }
+
+  .feature p{
+    font-size: 14px;
+    line-height: 26px;
+  }
+
+  .feature-item-blue{
+    background-color: var(--basic-blue)
+  }
+
+  .feature-item-blue h2{
+    font-size: 21px;
+    line-height: 21px;
+  }
