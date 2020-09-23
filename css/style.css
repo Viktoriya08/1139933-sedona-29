@@ -3,7 +3,7 @@
     --basic-black-light:  #333333;
     --basic-black-rating: #666666;
     --basic-white: #ffffff;
-    --blue-rest:  #81B3D2; 
+    --basic-blue-rest:  #81B3D2; 
     --basic-blue-focus: #669EC0; 
     --basic-blue-press:#5496BD;
     --basic-gray:  #EEEEEE;
@@ -98,9 +98,10 @@
     line-height: 21px;
     color: var(--basic-black);
   }
-  .feature-item-blue {
-    color: var(--basic-white);
-    background-color: var(--basic-blue-rest);
+
+  .feature-item-blue{
+   color: var(--basic-white);
+   background-color: var(--basic-blue-rest);
   }
 
   .feature-item-white{
@@ -167,7 +168,7 @@
   }
 
   .social-button{
-    background-color: var(--blue-rest);
+    background-color: var(--basic-blue-rest);
   }
 
   .footer-social a:hover {
@@ -187,7 +188,7 @@
   }
 
   .footer-copyright a:hover {
-    color: var(--blue-rest);
+    color: var(--basic-blue-rest);
   }
 
   .footer-copyright a:active {
