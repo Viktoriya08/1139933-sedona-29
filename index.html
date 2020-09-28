@@ -13,46 +13,50 @@
 
     <header class="main-header">
       <nav class="main-navigation">
-        <a class="main-header-logo">
+         <a class="main-header-logo">
           <img src="img/logo.svg"width="138" height="70" alt="Логотип Седона">
         </a>
         <ul class="site-navigation">
           <li><a href="blank.html"></a>Информация</li>
           <li><a href="blank.html"></a>Фото и видео</li>
-          <li><a href="blank.html"></a>Карта штата</li>
-          <li><a href="catalog.html">Гостиницы</a></li>
+          <li class="map"><a href="blank.html"></a>Карта штата</li>
+          <li class="transition"><a href="catalog.html">Гостиницы</a></li>
         </ul>
       </nav>
     </header>
 
     <main class="container">
       <section class="welcome">
-        <img src="img/background photo.jpg"width="1200" height="509" alt="Ландшафт Седоны">
+        <img src="img/background_photo.jpg"width="1200" height="509" alt="Ландшафт Седоны">
       </section>
      <section class="features">
-        <h1>Седона-небольшой городок в Аризоне, заслуживающий большего</h1>
-        <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+        <div class="feature-heading">
+          <h1>Седона-небольшой городок в Аризоне, заслуживающий большего</h1>
+          <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+        </div>
         <ol class="features-list">
           <li class="feature-item-blue">
             <h2>Настоящий городок</h2>
             <p> -№1 -</p>
             <p>Седона-не атракцион для туристов, там течет своя жизнь</p>
-            <img src="img/image1.jpg"width="800" height="256" alt="Улица города Седона">
           </li>
-            <li class="feature-item-white">
+          <li class="feature-street"><img src="img/image1.jpg"width="800" height="256" alt="Улица города Седона">
+          </li>
+          <li class="feature-item-white">
               <h3>Жилье</h3>
               <p>Рекомендуем пожить в настоящем мотеле, все как в кино</p>
-            </li>
-            <li class="feature-item-white">
+          </li>
+          <li class="feature-item-white">
               <h3>Еда</h3>
               <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь</p>
-            </li>
+          </li>
             <li class="feature-item-white">
               <h3>Сувениры</h3>
               <p>Не только китайского, нои местного производства</p>
             </li>
+          <li class="feature-bridge"><img src="img/image2.jpg"width="800" height="256" alt="Мост Дьявола">
+          </li>
           <li class="feature-item-blue">
-            <img src="img/image2.jpg"width="800" height="256" alt="Мост Дьявола">
             <h2>Там есть мост Дьявола</h2>
             <p>- №2 -</p>
             <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
@@ -86,26 +90,32 @@
       </section>
     </main>
 
-    <footer class="page-footer main-footer">
-      <section class="footer-contacts">
-        <a class="footer-visit" href="blank.html">#visitcedona</a>
-        <p class="footer-phone">Тел: <a href="tel:+74956660166">+7 (495) 666-01-66</a></p>
+    <footer class="main-footer">
+      <div class="footer-container">
+        <section class="footer-contacts">
+          <a class="footer-visit" href="blank.html">#visitcedona</a>
+          <p class="footer-phone">Тел: <a href="tel:+74956660166">+7 (495) 666-01-66</a></p>
+        </section>
+        <section class="footer-icons">
         <ul class="footer-social">
           <li>
-            <a class="social-button" href="#">Твитер</a>
+            <a class="social-button" href="#"> <img src="img/twitter-icon.svg"width="17" height="17" alt="Логотип Твитер"></a>
           </li>
           <li>
-            <a class="social-button" href="#">Фейсбук</a>
+            <a class="social-button" href="#"><img src="img/fb-icon.svg"width="12" height="22" alt="Логотип Фейсбук"></a>
           </li>
           <li>
-            <a class="social-button" href="#">Ютуб</a>
+            <a class="social-button" href="#"><img src="img/youtube-icon.svg"width="20" height="16" alt="Логотип Ютуб"></a>
           </li>
         </ul>
+        </section>
+        <section class="footer-made">
         <p class="footer-copyright">
           Website by
           <a href="https://htmlacademy.ru">HTML Academy</a>
         </p>
-      </section>
+        </section>
+      </div>
     </footer>
 
   </div>
