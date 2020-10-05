@@ -46,6 +46,8 @@
   .main-conteiner {
     background-color: var(--basic-white);
     box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
+    width: 1200px;
+    margin: 0 auto;
     min-height: 100%;
     display: grid;
     grid-template-rows: min-content 1fr min-content;
@@ -63,9 +65,10 @@
   .site-navigation{
     display: grid;
     grid-template-columns: 240px 240px 240px 240px;
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
   }
 
   .map {
@@ -85,7 +88,14 @@
   }
 
   .transition a:active {
-      color: var(--basic-gray-rest);
+    color: var(--basic-gray-rest);
+  }
+
+  .welcome {
+    width: 1200px;
+    height: 509px;
+    margin: auto;
+    background-image: url("img/background_photo.jpg");
   }
 
   .features {
@@ -96,13 +106,21 @@
     display: grid;
     grid-template-columns: 400px 400px 400px;
     list-style-type: none;
-    margin: 0 auto;
-    padding: 0 auto;
+    padding-inline-start: 0;
   }
 
-  .feature-street {
-    grid-column-start: 2;
-    grid-column-end: 4;
+  .feature-item-blue {
+    grid-column-start: 1;
+    grid-column-end: 4; 
+    display: flex;
+    flex-direction: row;
+  }
+
+  .feature-item-conteiner {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin: auto;
   }
 
   .feature-bridge{
@@ -123,13 +141,11 @@
   .features-list h2, .features-list h3 {
     font-size: 21px;
     line-height: 21px;
-    color: var(--basic-black);
   }
 
   .features-list p {
     font-size: 14px;
     line-height: 21px;
-    color: var(--basic-black);
   }
 
   .feature-item-blue{
@@ -182,19 +198,24 @@
     background-color: rgba(255, 255, 255, 0.9);
     margin-top: 23px;
     margin-bottom: 36px;
-    justify-self: center;
   }
 
   .footer-container {
     display: grid;
     grid-template-columns: 400px 400px 400px;
   }
+
+  .footer-contacts {
+    text-align: center;
+  }
+
   .footer-contacts a{
     color: var(--basic-black);
     font-size: 21px;
     line-height: 26px;
   }
   .footer-phone{
+    text-align: center;
     color: var(--basic-black);
     font-size: 21px;
     line-height: 26px;
@@ -203,9 +224,16 @@
   .footer-visit {
     font-weight: 700;
   }
+
+  .footer-icons {
+    text-align: center;
+  }
+
   .footer-social{
+    display: flex;
+    flex-direction: row;
     list-style-type: none;
-    margin: 0;
+    justify-content: center;
     padding: 0;
   }
 
@@ -224,7 +252,9 @@
   .footer-copyright{
     font-size: 14px;
     line-height: 26px;
+    text-align: center;
   }
+
   .footer-copyright a{
     color: var(--basic-black);
   }
@@ -234,7 +264,7 @@
   }
 
   .footer-copyright a:active {
-      color: var(--basic-gray-rest);
+    color: var(--basic-gray-rest);
   }
 
 
@@ -244,19 +274,32 @@
 
  .found {
     border-bottom: 1px solid var(--basic-gray-line);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 73px;
+}
+
+.found-sorting {
+  flex-grow: 1;
+  padding-left: 46px;
+  display: flex;
+  flex-direction: row;
+}
+
+.sorting-list {
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+  line-height: 18px;  
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
   .result {
     font-size: 21px;
     line-height: 26px;
     font-weight: 700;
-  }
-
-  .sorting {
-    font-size: 12px;
-    line-height: 18px;  
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
   }
 
   .sorting-price {
@@ -265,11 +308,13 @@
   }
 
   .sorting-type {
+    color: var(--basic-black);
     opacity: 0.3;
     border-bottom: 1px dotted var(--basic-blue-rest);
   }
 
   .sorting-rating {
+    color: var(--basic-black);
     opacity: 0.3;
     border-bottom: 1px dotted var(--basic-blue-rest); 
   }
@@ -278,6 +323,29 @@
     margin: 0;
     padding: 0;
     list-style-type: none;
+  }
+
+  .hotel-container {
+    display: flex;
+    flex-direction: row;
+    padding: 73px;
+    border-bottom: 1px solid var(--basic-gray-line);
+    align-items: center;
+  }
+
+  .hotel-name {
+    flex-grow: 1;
+    padding-left: 29px;
+    flex-shrink: 1;
+  }
+
+  .hotel-name a h3 {
+    margin: 0;
+  }
+
+  .hotel-name-price {
+    display: flex;
+    flex-direction: row;
   }
 
   .hotel {
@@ -290,6 +358,8 @@
   .hotel-selection {
     font-size: 14px;
     line-height: 21px; 
+    margin: 0;
+    padding: 0;
   }
 
   .details {
