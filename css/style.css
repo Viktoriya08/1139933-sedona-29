@@ -122,19 +122,6 @@
     background-size: auto cover;
   }
 
-/*.welcome img::after{
-  content: "";
-  position: absolute;
-  bottom: 0;
-  background-image: url("../img/background_photo_botton.png");
-  width: 1200px;
-  height: 57px;
-}
-
-.welcome img {
-  position: relative;
-}*/
-
   .features {
     text-align: center;
     padding-top: 41px;
@@ -168,7 +155,7 @@
   }
 
   .features h1{
-    width: 470px;
+    max-width: 470px;
     height: 80px;
     margin: auto;
     font-size: 21px;
@@ -186,18 +173,18 @@
     margin: auto;
     font-size: 21px;
     line-height: 21px;
-    padding-bottom: 25px;
   }
 
   .features-list p {
     width: 301px;
-    margin: 52 23 51 54;
+    margin: 0;
     font-size: 14px;
     line-height: 21px;
   }
 
-  .feature-item-conteiner h2 {
-    margin: 139 44 139 25;
+  .features-list .feature-item-number {
+    margin-top: 25px;
+    margin-bottom: 23px;
   }
 
   .feature-item-blue{
@@ -246,10 +233,16 @@
 }
 
 .choice a{
-color: var(--basic-white);
-font-size: 21px;
-line-height: 26px;
-background-color: var(--basic-brown-rest);
+  display: block;
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: var(--basic-white);
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  background-color: var(--basic-brown-rest);
+  width: 568px;
 }
 
 .choice a:hover{
@@ -259,6 +252,8 @@ background-color: var(--basic-brown-rest);
 .choice a:active{
   background-color: var(--basic-brown-press);
 } 
+
+
 
 .main-footer{
   position: absolute;
@@ -359,11 +354,140 @@ background-color: var(--basic-brown-rest);
 .academy-logo:active path {
   fill: var(--basic-gray-rest);
 }
+/*---------------------------------------------------------всплывающее окно*/
+
+.modal {
+  width: 568px;
+  position: fixed;
+  margin-left: 356px;
+  margin-top: 200px;
+  background-color: var(--basic-white);
+  size: 14px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.modal-search {
+  display: flex;
+  flex-direction: column;
+  padding: 55px;
+}
+
+.arrival input,
+.departure input{
+  width: 346px;
+  height: 38px;
+  background-color: var(--basic-gray-rest);
+}
+
+.arrival input:hover,
+.departure input:hover{
+  background-color: var(--basic-gray-focus);
+}
+
+.arrival input:active,
+.departure input:active{
+  background-color: var(--basic-white);
+}
+
+.arrival input[type="date"]::-webkit-calendar-picker-indicator, /*нагуглила такой код с -webkit, но это вроде префикс только для Chrome, Safari, Opera. Есть еще вариант как вставить этот календарь?   */
+.departure input[type="date"]::-webkit-calendar-picker-indicator {
+  color: rgba(0, 0, 0, 0);
+  opacity: 1;
+  display: block;
+  background: url(../img/calendar.png) no-repeat center;
+  width: 21px;
+  height: 23px;
+  border-width: thin;
+  margin-right: 10px;
+}
+
+.arrival input[type="date"]::-webkit-calendar-picker-indicator:hover,
+.departure input[type="date"]::-webkit-calendar-picker-indicator:hover{
+  background: url(../img/calendar.svg) no-repeat center;
+}
+
+.arrival input[type="date"]::-webkit-calendar-picker-indicator:active,
+.departure input[type="date"]::-webkit-calendar-picker-indicator:active{
+  background: url(../img/calendar-blue.png) no-repeat center;
+}
+
+.arrival {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.departure {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.quantity {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.quantity-parents {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.quantity-children {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.quantity-plus {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--basic-gray-rest);
+  width: 88px;
+  height: 38px;
+  padding-left: 13px;
+  padding-right: 13px;
+  margin-left: 35px;
+}
+
+.quantity-plus input{
+  background-color: var(--basic-gray-rest);
+}
+
+.modal-button .modal-trip {
+  color: var(--basic-white);
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  width: 458px;
+  text-transform: uppercase;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  background-color: var(--basic-blue-rest);
+}
+
+.modal-button .modal-trip:hover{
+  background-color: var(--basic-blue-focus);
+}
+
+.modal-button .modal-trip:active{
+  background-color: var(--basic-blue-press);
+}
 
 /*--------------------------------------------------------вторая страница */
 
 .search {
-  padding: 26px 73px 32px 73px;
+  padding: 26px 73px 32px 73px;   /*оставить такие падинги для секции? Земеряла по макету. Или так не надо делать?*/
   background-image: url(../img/background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -549,7 +673,7 @@ background-color: var(--basic-brown-rest);
   flex-direction: row;
   flex-wrap: wrap;
   align-items: baseline;
-  padding: 29px 73px 31px 73px;
+  padding: 29px 73px 31px 73px;                      /* тоже падинги по макету. Остаить или убрать?*/
 }
 
 .found-sorting {
@@ -659,17 +783,12 @@ background-color: var(--basic-brown-rest);
 .hotel-container {
   display: flex;
   flex-direction: row;
-  padding: 30px 73px 30px 73px;
+  padding: 30px 73px 30px 73px;                   /* -----------------------------падинги по макету*/
   border-bottom: 1px solid var(--basic-gray-line);
 }
 
 .hotel-foto{
   display: flex;
-}
-
-.hotel-foto img{
-  display: block;
-  vertical-align: bottom;
 }
 
 .hotel-name {
@@ -680,8 +799,17 @@ background-color: var(--basic-brown-rest);
   justify-content: space-between;
 }
 
-.hotel-name h3 {
+.hotel-name .hotel {
   margin: 0;
+} 
+
+.hotel-name .hotel:hover{
+  color: var(--basic-blue-rest);
+}
+
+.hotel-name .hotel:active{
+  color: var(--basic-black);
+  opacity: 0.3;
 }
 
 .hotel-name-container {
@@ -715,10 +843,26 @@ background-color: var(--basic-brown-rest);
   padding: 3px 17px;
 }
 
+.hotel-name-price .details:hover{
+  background-color: var(--basic-blue-focus);
+}
+
+.hotel-name-price .details:active{
+  background-color: var(--basic-blue-press);
+}
+
 .reservation {
   color: var(--basic-white);
-  background-color: var(--basic-brown-focus);
+  background-color: var(--basic-brown-rest);
   padding: 3px 17px;
+}
+
+.hotel-name-details .reservation:hover{
+  background-color: var(--basic-brown-focus);
+}
+
+.hotel-name-details .reservation:active{
+  background-color: var(--basic-brown-press);
 }
 
 .hotel-stars {

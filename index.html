@@ -41,7 +41,7 @@
           <li class="feature-item-blue">
             <div class="feature-item-conteiner">
               <h2>Настоящий городок</h2>
-              <p> -№1 -</p>
+              <p class="feature-item-number"> -№1 -</p>
               <p>Седона-не атракцион для туристов, там течет своя жизнь
               </p>
             </div>
@@ -66,23 +66,23 @@
             <img src="img/image2.jpg" width="800" height="256" alt="Мост Дьявола">
             <div class="feature-item-conteiner">
               <h2>Там есть мост Дьявола</h2>
-              <p>- №2 -</p>
+              <p class="feature-item-number">- №2 -</p>
               <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
             </div>
           </li>
           <li class="feature-item-grey">
             <h2>Небольшая площадь</h2>
-            <p>- №3 -</p>
+            <p class="feature-item-number">- №3 -</p>
             <p>Все достопримечательности находятся очень близко</p>
           </li>
           <li class="feature-item-grey">
             <h2>Красивая дорога</h2>
-            <p>- №4 -</p>
+            <p class="feature-item-number">- №4 -</p>
             <p>Ехать в Седону из Лас-Вегаса совсем не скучно</p>
           </li>
           <li class="feature-item-grey">
             <h2>Мало туристов</h2>
-            <p>- №5 -</p>
+            <p class="feature-item-number">- №5 -</p>
             <p>Большинство едет в Гранд Каньон и толпится там</p>
           </li>
         </ol>
@@ -137,7 +137,41 @@
         </section>
       </div>
     </footer>
+<!------------------------------Всплывающее окно поиска-->
 
+    <section class="modal">
+      <form class="modal-search" action="#" method="GET">
+        <div class="arrival">
+          <label for="data">Дата заезда:</label>
+          <input type="date" name="date">
+        </div>
+        <div class="departure">
+          <label for="data">Дата выезда:</label>
+          <input type="date" name="date">
+        </div>
+        <div class="quantity">
+          <div class="quantity-parents">
+            <label for="parents">Взрослые:</label>
+            <div class="quantity-plus">
+              <span> + </span>
+              <input type="number" min="1" max="50" step="1" id="parents" name="parents" value="2">
+              <span> - </span>
+          </div>
+          </div>
+          <div class="quantity-children">
+            <label for="children">Дети:</label>
+            <div class="quantity-plus">
+              <span> + </span>
+              <input type="number" min="0" max="50" step="1" id="children" name="children" value="0">
+              <span> - </span>
+            </div>
+          </div>
+        </div>
+        <div class="modal-button">
+          <button class="modal-trip" type="submit">Найти</button>
+      </div>
+      </form>
+    </section>
   </div>
 
 </body>
