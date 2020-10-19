@@ -84,30 +84,33 @@
 
   .site-navigation{
     display: grid;
-    grid-template-columns: 240px 240px 240px 240px;
+    grid-template-columns: repeat(5, 1fr); /* 240px 240px 240px 240px; Сделать лоя каждого ЛИ грид-ария? */
+    gap: 10px 0px;
     list-style-type: none;
     text-align: center;
-    margin: 15;
+    margin: 15px 0px;
     padding: 0;
   }
 
-  .map {
-    grid-column-start: 4;
-  }
+.site-navigation li:nth-of-type(3), 
+.site-navigation li:nth-of-type(7){
+  grid-column-start: 4;
+}
 
-  .transition {
-    grid-column-start: 5;
-  }
+.site-navigation li:nth-of-type(4),
+.site-navigation li:nth-of-type(8){
+  grid-column-start: 5;
+}
 
-  .transition a{
+  .site-navigation a{
     color: var(--basic-black);
   }
 
-  .transition a:hover {
+  .site-navigation a:hover {
     color: var(--basic-blue-rest);
   }
 
-  .transition a:active {
+  .site-navigation a:active {
     color: var(--basic-gray-rest);
   }
 
@@ -125,6 +128,10 @@
   .features {
     text-align: center;
     padding-top: 41px;
+  }
+
+  .feature-heading p{
+    margin-top: 15px;
   }
 
   .features-list {
@@ -156,30 +163,34 @@
 
   .features h1{
     max-width: 470px;
-    height: 80px;
+    min-height: 80px;
     margin: auto;
     font-size: 21px;
     line-height: 26px;
   }
 
-  .features p{
+/*   .features p{
+    max-width: 700px;
     font-size: 14px;
     line-height: 26px;
     text-align: center;
-  }
+    margin: 0 auto;
+  } */
 
   .features-list h2, .features-list h3 {
-    width: 159px;
+    min-width: 159px;
     margin: auto;
     font-size: 21px;
     line-height: 21px;
   }
 
   .features-list p {
-    width: 301px;
+    min-width: 301px;
     margin: 0;
     font-size: 14px;
     line-height: 21px;
+    padding-left: 52px;
+    padding-right: 52px;
   }
 
   .features-list .feature-item-number {
@@ -202,8 +213,7 @@
   }
 
   .feature-item-white h3 {
-    padding-top: 28px;
-    padding-bottom: 25px;
+    padding: 25px 40px;
   }
 
   .feature-item-grey{
@@ -217,19 +227,21 @@
 
 .choice {
   text-align: center;
-  padding-top: 58px;
+  padding-top: 18px;
 }
 
 .choice h2{
   font-size: 30px;
   line-height: 24px;
+  padding-left: 200px; /*padding поставила от переполнения*/
+  padding-right: 200px;
 }
 
 .choice-info{
   font-size: 14px;
   line-height: 24px;
-  width: 435px;
-  margin: 45px auto 25px;
+  width: 435px;     /*или лучше так от переполнения - с width*/
+  margin: 35px auto 43px;
 }
 
 .choice a{
@@ -251,12 +263,14 @@
 
 .choice a:active{
   background-color: var(--basic-brown-press);
+  color: var(--basic-brown-rest);
 } 
 
 
 
 .main-footer{
   position: absolute;
+  width: 1200px;
   bottom: 0px;
   color: var(--basic-black);
   background-color: rgba(255, 255, 255, 0.9);
@@ -265,12 +279,13 @@
 }
 
 .page-footer {
+  width: 1200px;
   padding-top: 23px;
   padding-bottom: 36px;
 }
 .footer-container {
   display: grid;
-  grid-template-columns: 400px 400px 400px;
+  grid-template-columns:  1fr 1fr 1fr;
 }
 
   .footer-contacts {
@@ -373,43 +388,48 @@
   padding: 55px;
 }
 
-.arrival input,
+/* .arrival input,
 .departure input{
   width: 346px;
   height: 38px;
   background-color: var(--basic-gray-rest);
+  border: none;
+} */
+
+.container-calendar input{  
+  position: relative;
+  width: 346px;
+  height: 38px;
+  background-color: var(--basic-gray-rest);
+  border: none;
 }
 
-.arrival input:hover,
-.departure input:hover{
-  background-color: var(--basic-gray-focus);
+.calendar{
+  position: absolute;
+  right: 55px;
+  width: 25px;
+  height: 25px;
+  border: none;
+  margin-right: 8px;
+  background: rgba(0, 0, 0, 0);
+  background-image: url(../img/calendar.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
 }
 
-.arrival input:active,
-.departure input:active{
-  background-color: var(--basic-white);
+.container-calendar input:hover ~.calendar {
+  background-image: url(../img/calendar-black.svg);
 }
 
-.arrival input[type="date"]::-webkit-calendar-picker-indicator, /*нагуглила такой код с -webkit, но это вроде префикс только для Chrome, Safari, Opera. Есть еще вариант как вставить этот календарь?   */
-.departure input[type="date"]::-webkit-calendar-picker-indicator {
-  color: rgba(0, 0, 0, 0);
-  opacity: 1;
-  display: block;
-  background: url(../img/calendar.png) no-repeat center;
-  width: 21px;
-  height: 23px;
-  border-width: thin;
-  margin-right: 10px;
+.container-calendar input:active ~.calendar {
+  background-image: url(../img/calendar-blue.svg);
 }
 
-.arrival input[type="date"]::-webkit-calendar-picker-indicator:hover,
-.departure input[type="date"]::-webkit-calendar-picker-indicator:hover{
-  background: url(../img/calendar.svg) no-repeat center;
-}
-
-.arrival input[type="date"]::-webkit-calendar-picker-indicator:active,
-.departure input[type="date"]::-webkit-calendar-picker-indicator:active{
-  background: url(../img/calendar-blue.png) no-repeat center;
+.container-calendar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .arrival {
@@ -447,7 +467,7 @@
   align-items: center;
 }
 
-.quantity-plus {
+.container-quantity {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -457,14 +477,66 @@
   height: 38px;
   padding-left: 13px;
   padding-right: 13px;
-  margin-left: 35px;
+  margin-left: 36px;
 }
 
-.quantity-plus input{
-  background-color: var(--basic-gray-rest);
+.container-quantity input{  
+  size: 14px;
+  line-height: 26px;
+  font-weight: 700;      
+  width: 30px;   
+  text-align: center;                       
+ background-color: var(--basic-gray-rest);
+  border: none;
 }
 
-.modal-button .modal-trip {
+.container-quantity input[type='number'] {              
+  -moz-appearance:textfield;
+}
+
+.container-quantity input::-webkit-outer-spin-button,
+.container-quantity input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.quantity-plus{
+  width: 15px;
+  height: 15px;
+  background-image: url(../img/icon-plus-grey.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+  cursor: pointer;
+}
+
+.quantity-plus:hover{
+  background-image: url(../img/icon-plus-black.svg);
+}
+
+.quantity-plus:active{
+  background-image: url(../img/icon-plus-blue.svg);
+}
+
+.quantity-minus {
+  width: 15px;
+  height: 15px;
+  background-image: url(../img/icon-minus-grey.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+}
+
+.quantity-minus:hover{
+  background-image: url(../img/icon-minus-black.svg);
+}
+
+.quantity-minus:active{
+  background-image: url(../img/icon-minus-blue.svg);
+}
+
+.modal-trip {
   color: var(--basic-white);
   font-size: 21px;
   line-height: 26px;
@@ -474,13 +546,15 @@
   padding-top: 16px;
   padding-bottom: 16px;
   background-color: var(--basic-blue-rest);
+  border: none;
 }
-
-.modal-button .modal-trip:hover{
+ 
+.modal-trip:hover{
   background-color: var(--basic-blue-focus);
 }
 
-.modal-button .modal-trip:active{
+.modal-trip:active{
+  color: var(--basic-blue-rest);
   background-color: var(--basic-blue-press);
 }
 
@@ -497,7 +571,6 @@
 .infrastructure {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   flex-wrap: wrap;
 }
 
@@ -514,13 +587,24 @@
   position: absolute;
   left: 1px;
   top: 0px;
-  width: 20px;
-  height: 20px;
+  width: 21px;
+  height: 21px;
   /*border: 3px solid var(--basic-white);*/
   background-image: url(../img/checkbox-off.svg);
   background-repeat: no-repeat;
-  background-size: cover;
-  /*border-radius: 10%;*/
+  background-size: 100%;
+}
+
+.filter-input-checkbox:disabled + label::before {
+  content: "";
+  background-image: url(../img/checkbox-off-block.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.filter-input-checkbox:checked + label::before,
+.filter-input-checkbox:disabled + label::before{
+  display: none;
 }
 
 .filter-input-checkbox:checked + label::after {
@@ -528,12 +612,11 @@
   position: absolute;
   left: 1px;
   top: 0px;
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   background-image: url(../img/checkbox-on.svg);
   background-repeat: no-repeat;
-  background-size: cover;
-  opacity: 1;
+  background-size: 100%;
 }
 
 .filter-input-checkbox:disabled + label::after {
@@ -541,21 +624,28 @@
   position: absolute;
   left: 1px;
   top: 0px;
-  width: 27px;
-  height: 23px;
+  width: 25px;
+  height: 25px;
   background-image: url(../img/checkbox-on-block.svg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
 }
 
 .infrastructure-list li{
   padding-top: 25px;
 }
 
-.filter-item {
-  margin: 0;
+.filter-item{
   padding: 0;
   border: none;
+}
+
+.filter-item-indent {
+  margin-right: 115px;
+}
+
+.filter-item-dig {
+  flex-grow: 1;
 }
 
 .filter-item ul{
@@ -646,6 +736,15 @@
   border: none;
 }
 
+.price-controls input[type='number'] {              /*может input сделать текстом? */
+  -moz-appearance:textfield;
+}
+
+.price-controls input::-webkit-outer-spin-button,
+.price-controls input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
 .contaiter-button .show{
   color: var(--basic-white);
   font-size: 14px;
@@ -673,7 +772,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   align-items: baseline;
-  padding: 29px 73px 31px 73px;                      /* тоже падинги по макету. Остаить или убрать?*/
+  padding: 0px 73px;                      /* тоже падинги по макету. Остаить или убрать?*/
 }
 
 .found-sorting {
@@ -703,6 +802,8 @@
 
 .sorting {
   margin-right: 40px;
+  font-size: 12px;
+  line-height: 18px; 
 }
 
 .result {
@@ -743,7 +844,7 @@
   margin-right: 5px;
   background-image: url(../img/icon-up-grey.svg);
   background-size: cover;
-  outline: none;
+ /*  outline: none;                      делает невидимой для навигации Табом*/
 }
 
 .found-button .found-button-up:hover{
@@ -754,13 +855,13 @@
 .found-button .found-button-up:active{
   background-image: url(../img/icon-up-blue.svg);
   background-repeat: no-repeat;
-  outline: none;
+  /* outline: none;                                       */
 }
 
 .found-button .found-button-down {
   background-image: url(../img/icon-down-grey.svg);
   background-size: cover;
-  outline: none;
+  /* outline: none; */
 }
 
 .found-button .found-button-down:hover{
@@ -771,7 +872,7 @@
 .found-button .found-button-down:active{
   background-image: url(../img/icon-down-blue.svg);
   background-repeat: no-repeat;
-  outline: none;
+  /* outline: none; */
 }
 
 .all-hotels {
@@ -848,6 +949,7 @@
 }
 
 .hotel-name-price .details:active{
+  color: var(--basic-blue-rest);
   background-color: var(--basic-blue-press);
 }
 
@@ -862,6 +964,7 @@
 }
 
 .hotel-name-details .reservation:active{
+  color: var(--basic-brown-rest);
   background-color: var(--basic-brown-press);
 }
 
