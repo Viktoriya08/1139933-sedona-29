@@ -17,10 +17,10 @@
           <img src="img/logo.svg"width="138" height="70" alt="Логотип Седона»">
           </a>
           <ul class="site-navigation">
-            <li><a href="blank.html"></a>Информация</li>
-            <li><a href="blank.html"></a>Фотои видео</li>
-            <li class="map"><a href="blank.html"></a>Карта штата</li>
-            <li class="transition catalog">Гостиницы</li>
+            <li><a href="blank.html">Информация</a></li>
+            <li><a href="blank.html">Фото и видео</a></li>
+            <li><a href="blank.html">Карта штата</a></li>
+            <li>Гостиницы</li>
           </ul>
         </nav>
       </header>
@@ -51,15 +51,15 @@
                   <legend>Тип жилья:</legend>
                   <ul class="infrastructure-list">
                     <li class="filter-option">
-                      <input class="visually-hidden filter-input-checkbox" type="checkbox" name="" id="search-hotel"> 
+                      <input class="visually-hidden filter-input-checkbox" type="checkbox" name="" id="search-hotel"checked> 
                       <label for="search-hotel">Гостиница</label>
                     </li>
                     <li class="filter-option">
-                      <input class="visually-hidden filter-input-checkbox" type="checkbox" name="" id="search-motel"> 
+                      <input class="visually-hidden filter-input-checkbox" type="checkbox" name="" id="search-motel"checked> 
                       <label for="search-motel">Мотель</label>
                     </li>
                     <li class="filter-option">
-                      <input class="visually-hidden filter-input-checkbox" type="checkbox" name="search-apartments" id="search-apartments"> 
+                      <input class="visually-hidden filter-input-checkbox" type="checkbox" name="search-apartments" id="search-apartments"checked> 
                       <label for="search-apartments">Апартаменты</label>
                     </li>
                   </ul>
@@ -80,12 +80,12 @@
                           <div class="scale">
                             <div class="bar"></div>
                           </div>
-                          <div class="toggle toggle-min" tabindex="0"></div>
-                          <div class="toggle toggle-max" tabindex="0"></div>
+                          <div class="toggle toggle-min" tabindex="0" aria-label="Выбор минимальной стоимости в сутки"></div>
+                          <div class="toggle toggle-max" tabindex="0"aria-label="Выбор максимальной стоимости в сутки"></div>
                         </div>
                       </div>
                   </fieldset>
-                  <button class="show" type="submit"> Показать</button>
+                  <button class="show" type="submit"aria-label="Показать результат выбора стоимости в сутки"> Показать</button>
                 </div>
               </div>
             </form>
@@ -110,8 +110,8 @@
             </ul>
           </div>
           <div class="found-button">
-            <button class="found-button-up" type="button" aria-label="Пролистать страницу вверх"></button>
-            <button class="found-button-down" type="button" aria-label="Пролистать страницу вниз"></button>
+            <button class="found-button-up" type="button" aria-label="Листать страницу вверх"></button>
+            <button class="found-button-down" type="button" aria-label="Листать страницу вниз"></button>
           </div>
         </section>
      <ul class="all-hotels">
@@ -133,7 +133,7 @@
           </div>
         </div>
         <div class="hotel-stars">
-          <div class="container-stars">
+          <div class="container-stars" aria-label="Рейтинг гостиницы Amara Resort & Spa 5 звезд из 5">
             <img src="img/star.svg"width="18" height="17">
             <img src="img/star.svg"width="18" height="17">
             <img src="img/star.svg"width="18" height="17">
@@ -162,7 +162,7 @@
           </div>
         </div>
         <div class="hotel-stars">
-          <div class="container-stars">
+          <div class="container-stars" aria-label="Рейтинг мотеля Desert Quail Inn 3 звезды из 5">
             <img src="img/star.svg"width="18" height="17">
             <img src="img/star.svg"width="18" height="17">
             <img src="img/star.svg"width="18" height="17">
@@ -190,7 +190,7 @@
           </div>
         </div>
         <div class="hotel-stars">
-          <div class="container-stars">
+          <div class="container-stars" aria-label="Рейтинг апартаменты Villas at Poco Diablo 2 звезды из 5">
             <img src="img/star.svg"width="18" height="17">
             <img src="img/star.svg"width="18" height="17">
           </div>
@@ -213,20 +213,26 @@
             <li>
               <a class="social-button" href="#">
                 <span class="visually-hidden">Твитер</span>
-                <img src="img/twitter-icon.svg" width="17" height="17"
-                alt="Логотип Твитер"></a>
+                <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Логотип Твитер">
+                  <path d="M10.95 1.14409C12.635 0.648089 13.934 1.41409 14.527 2.32309C15.2 2.09209 15.858 1.84209 16.538 1.61509C16.5249 2.30145 16.2117 2.94761 15.681 3.38309C16.366 3.55309 16.985 2.89209 16.985 2.89209C16.816 3.89209 15.979 4.68009 15.422 4.91609C15.191 11.6661 12.247 16.1331 5.34498 15.9981H4.89898C4.48898 15.9981 0.734977 15.5381 0.000976562 14.1111C2.27198 14.3071 3.89398 13.6891 4.69398 12.9341C3.73398 12.6341 2.01498 12.4571 1.71498 9.98409C2.06398 10.0901 2.27898 10.2121 2.90498 10.1031C1.70498 9.24709 0.373977 8.53009 0.447977 6.33009C0.732977 6.65809 1.51498 6.86609 1.78798 6.80209C1.08498 6.56109 -0.182023 3.44209 0.893977 1.85009C2.71198 3.70409 4.62898 5.45609 8.04598 5.62309C8.25398 3.33009 9.18298 1.79309 10.95 1.14409Z" fill="white"/>
+                </svg>
+              </a>
             </li>
             <li>
               <a class="social-button" href="#">
                 <span class="visually-hidden">Фейсбук</span>
-                <img src="img/fb-icon.svg" width="12" height="22"
-                alt="Логотип Фейсбук"></a>
+                <svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Логотип Фейсбук">
+                  <path d="M12 4V0H8C5.79086 0 4 1.79086 4 4V8H0V12H4V22H8V12H12V8H8V4H12Z" fill="white"/>
+                </svg>
+              </a>
             </li>
             <li>
               <a class="social-button" href="#">
                 <span class="visually-hidden">Ютуб</span>
-                <img src="img/youtube-icon.svg" width="20" height="16"
-                alt="Логотип Ютуб"></a>
+                <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Логотип Ютуб">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M3 0H17C18.65 0 20 1.35 20 3V13C20 14.65 18.65 16 17 16H3C1.35 16 0 14.65 0 13V3C0 1.35 1.35 0 3 0ZM6.027 4.002V11.998L15.014 8L6.027 4.002Z" fill="white"/>
+                </svg>
+              </a>
             </li>
           </ul>
         </section>

@@ -127,7 +127,7 @@
 
   .features {
     text-align: center;
-    padding-top: 41px;
+    padding-top: 35px;
   }
 
   .feature-heading p{
@@ -194,8 +194,8 @@
   }
 
   .features-list .feature-item-number {
-    margin-top: 25px;
-    margin-bottom: 23px;
+    margin-top: 28px;
+    margin-bottom: 25px;
   }
 
   .feature-item-blue{
@@ -244,143 +244,50 @@
   margin: 35px auto 43px;
 }
 
-.choice a{
+.choice-button{
   display: block;
+  position: relative;
   margin: 0 auto;
+  border: none;
   padding-top: 30px;
   padding-bottom: 30px;
   color: var(--basic-white);
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
+  text-transform: uppercase;
   background-color: var(--basic-brown-rest);
   width: 568px;
 }
 
-.choice a:hover{
+.choice-button:hover{
   background-color: var(--basic-brown-focus);
 } 
 
-.choice a:active{
+.choice-button:active{
   background-color: var(--basic-brown-press);
   color: var(--basic-brown-rest);
 } 
 
-
-
-.main-footer{
-  position: absolute;
-  width: 1200px;
-  bottom: 0px;
-  color: var(--basic-black);
-  background-color: rgba(255, 255, 255, 0.9);
-  padding-top: 23px;
-  padding-bottom: 36px;
-}
-
-.page-footer {
-  width: 1200px;
-  padding-top: 23px;
-  padding-bottom: 36px;
-}
-.footer-container {
-  display: grid;
-  grid-template-columns:  1fr 1fr 1fr;
-}
-
-  .footer-contacts {
-    text-align: center;
-    padding: 0px;
-  }
-
-  .footer-contacts a{
-    color: var(--basic-black);
-    font-size: 21px;
-    line-height: 26px;
-  }
-  .footer-phone{
-    text-align: center;
-    color: var(--basic-black);
-    font-size: 21px;
-    line-height: 26px;
-    font-weight: 700;
-    margin: 0px;
-  }
-  .footer-visit {
-    font-weight: 700;
-  }
-
-  .footer-icons {
-    text-align: center;
-  }
-
-  .footer-social{
-    display: flex;
-    flex-direction: row;
-    list-style-type: none;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
-  }
-
-.footer-social li {
-  position: relative;
-  margin-right: 6px;
-}
-
-.social-button{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 46px;
-  height: 48px;
-  background-color: var(--basic-blue-rest); 
-}
-
-.footer-social a:hover {
-  background-color: var(--basic-blue-focus);
-}
-
-.footer-social a:active {
-   background-color: var(--basic-blue-press);
-}
-
-.footer-copyright{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 14px;
-  line-height: 26px;
-  margin: 0;
-}
-
-.academy-logo {
-  margin-left: 8px;
-}
-
-.academy-logo path{
-  fill: var(--basic-black);
-}
-
-.academy-logo:hover path {
-  fill: var(--basic-blue-rest);
- }
-
-.academy-logo:active path {
-  fill: var(--basic-gray-rest);
-}
 /*---------------------------------------------------------всплывающее окно*/
 
 .modal {
+  display: none;
   width: 568px;
-  position: fixed;
-  margin-left: 356px;
-  margin-top: 200px;
+  position: absolute;
+  margin-left: 316px;
   background-color: var(--basic-white);
   size: 14px;
   line-height: 26px;
   font-weight: 700;
 }
+
+.modal-show {
+  display: block;
+  width: 568px;
+  position: absolute;
+  animation: bounce 0.6s;
+} 
 
 .modal-search {
   display: flex;
@@ -418,13 +325,17 @@
   cursor: pointer;
 }
 
-.container-calendar input:hover ~.calendar {
+.container-calendar .calendar:hover  {
   background-image: url(../img/calendar-black.svg);
 }
 
-.container-calendar input:active ~.calendar {
+.container-calendar .calendar:active {
   background-image: url(../img/calendar-blue.svg);
-}
+} 
+
+/* .container-calendar input:active ~.calendar {
+  background-image: url(../img/calendar-blue.svg);
+} */
 
 .container-calendar {
   display: flex;
@@ -558,6 +469,138 @@
   background-color: var(--basic-blue-press);
 }
 
+/*-----------------------------анимация модального окна*/
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  } 
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/*-------------------------------------------------------подвал*/
+.main-footer{
+  position: absolute;
+  width: 1200px;
+  bottom: 0px;
+  color: var(--basic-black);
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 36px 0px;
+}
+
+.page-footer {
+  width: 1200px;
+  padding-top: 23px;
+  padding-bottom: 36px;
+}
+.footer-container {
+  display: grid;
+  grid-template-columns:  1fr 1fr 1fr;
+  padding: 0px 50px;
+}
+
+  .footer-contacts {
+    text-align: center;
+    padding: 0px;
+  }
+
+  .footer-contacts a{
+    color: var(--basic-black);
+    font-size: 21px;
+    line-height: 26px;
+  }
+  .footer-phone{
+    text-align: center;
+    color: var(--basic-black);
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: 700;
+    margin: 10px 0px 0px 0px;
+  }
+  .footer-visit {
+    font-weight: 700;
+  }
+
+  .footer-icons {
+   text-align: center;
+   margin-top: 15px;
+  }
+
+  .footer-social{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+  }
+
+.footer-social li {
+  position: relative;
+  margin-right: 6px;
+}
+
+.social-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 48px;
+  background-color: var(--basic-blue-rest); 
+}
+
+.footer-social a:hover {
+  background-color: var(--basic-blue-focus);
+}
+
+.footer-social a:active {
+   background-color: var(--basic-blue-press);
+}
+
+.social-button:active path{
+  fill: var(--basic-blue-rest);
+}
+
+.footer-made {
+  margin-top: 20px;
+}
+
+.footer-copyright{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  line-height: 26px;
+  margin: 0;
+}
+
+.academy-logo {
+  margin-left: 8px;
+}
+
+.academy-logo path{
+  fill: var(--basic-black);
+}
+
+.academy-logo:hover path {
+  fill: var(--basic-blue-rest);
+ }
+
+.academy-logo:active path {
+  fill: var(--basic-gray-rest);
+}
+
+
 /*--------------------------------------------------------вторая страница */
 
 .search {
@@ -632,7 +675,7 @@
 }
 
 .infrastructure-list li{
-  padding-top: 25px;
+  padding-top: 23px;
 }
 
 .filter-item{
@@ -693,7 +736,7 @@
 }
 
 .range-controls .toggle-max{
-  left: 240px;
+  left: 250px;
 }
 
 .range-controls .scale {
@@ -705,7 +748,7 @@
 
 .range-controls .bar {
   height: 2px;
-  width: 248px;
+  width: 258px;
   background-color: var(--basic-white);
 }
 
@@ -810,6 +853,7 @@
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
+  margin: 30px 0px;
 }
 
 .sorting-main {
@@ -884,7 +928,7 @@
 .hotel-container {
   display: flex;
   flex-direction: row;
-  padding: 30px 73px 30px 73px;                   /* -----------------------------падинги по макету*/
+  padding: 25px 73px;                   /* -----------------------------падинги по макету*/
   border-bottom: 1px solid var(--basic-gray-line);
 }
 
