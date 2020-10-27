@@ -272,7 +272,7 @@
 /*---------------------------------------------------------всплывающее окно*/
 
 .modal {
-  display: none;
+  display: block;
   width: 568px;
   position: absolute;
   margin-left: 316px;
@@ -282,8 +282,8 @@
   font-weight: 700;
 }
 
-.modal-show {
-  display: block;
+.modal-hidden {
+  display: none;
   width: 568px;
   position: absolute;
   animation: bounce 0.6s;
