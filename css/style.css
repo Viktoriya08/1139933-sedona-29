@@ -280,18 +280,19 @@
   size: 14px;
   line-height: 26px;
   font-weight: 700;
+  animation: bounce 0.6s;
 }
 
 .modal-hidden {
   display: none;
 } 
 
-.modal-show {
+/* .modal-show {
   display: block;
   width: 568px;
   position: absolute;
-  animation: bounce 0.6s;
-}
+  
+} */
 
 .modal-search {
   display: flex;
@@ -476,11 +477,11 @@
 /*-----------------------------анимация модального окна*/
 @keyframes bounce {
   0% {
-    transform: translateY(-2000px);
+    transform: translateY(-90px);
   } 
 
   70% {
-    transform: translateY(30px);
+    transform: translateY(10px);
   }
 
   90% {
