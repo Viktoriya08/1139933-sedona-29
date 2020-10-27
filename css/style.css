@@ -284,10 +284,14 @@
 
 .modal-hidden {
   display: none;
+} 
+
+.modal-show {
+  display: block;
   width: 568px;
   position: absolute;
   animation: bounce 0.6s;
-} 
+}
 
 .modal-search {
   display: flex;
