@@ -6,7 +6,7 @@ const departure = modalPopup.querySelector (".data-departure");
 const parents = modalPopup.querySelector (".parents");
 const children = modalPopup.querySelector (".children");
 
-/* const storageChildren = localStorage.getItem("children"); */
+
 
 let isStorageSupport = true;
 let storageParents = "";
@@ -18,7 +18,7 @@ try {
     isStorageSupport = false;
   }
 
-  try {
+try {
     storageChildren = localStorage.getItem("children");
   } catch (err) {
     isStorageSupport = false;
@@ -30,6 +30,7 @@ choiceButton.addEventListener("click", function (evt) {
     modalPopup.classList.add("modal-hidden");
     } else {
         modalPopup.classList.remove("modal-hidden");
+        modalPopup.classList.remove("modal-error");
     }
 });
 
@@ -40,6 +41,7 @@ window.addEventListener("keydown", function (evt) {
         modalPopup.classList.add("modal-hidden");
       } else {
         modalPopup.classList.remove("modal-hidden");
+        modalPopup.classList.remove("modal-error");
       }
     }
   });
@@ -47,6 +49,9 @@ window.addEventListener("keydown", function (evt) {
 form.addEventListener("submit", function (evt) {
     if (!arrival.value || !departure.value || !parents.value || !children.value) {
         evt.preventDefault();
+        modalPopup.classList.remove("modal-error");
+        modalPopup.offsetWidth = modalPopup.offsetWidth;
+        modalPopup.classList.add("modal-error");
       }  else {
         if (isStorageSupport) {
         localStorage.setItem("children", children.value);

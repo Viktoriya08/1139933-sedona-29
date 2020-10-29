@@ -20,14 +20,14 @@
             <li><a href="blank.html">Информация</a></li>
             <li><a href="blank.html">Фото и видео</a></li>
             <li><a href="blank.html">Карта штата</a></li>
-            <li>Гостиницы</li>
+            <li><a class="open" href="catalog.html">Гостиницы</a></li>
           </ul>
         </nav>
       </header>
 
       <main class="container">
         <section class="search">
-            <h1 class="visually-hidden">Каталог гостиниц</h1> <!-- скрытый элемент-->
+            <h1 class="visually-hidden">Каталог гостиниц</h1>
             <form class="filter" action="https://echo.htmlacademy.ru/" method="get">   
               <div class="infrastructure">  
                 <fieldset class="filter-item filter-item-indent">
@@ -35,15 +35,15 @@
                   <ul class="infrastructure-list">
                     <li class="filter-option">
                       <input class="visually-hidden filter-input-checkbox" type="checkbox" name="swimming" id="swimming" checked>
-                      <label for="swimming">Бассейн</label>
+                      <label for="swimming" tabindex="0">Бассейн</label>
                     </li>
                     <li class="filter-option">
                       <input class="visually-hidden filter-input-checkbox" type="checkbox" disabled name="" id="parking"> 
-                      <label for="parking" >Парковка</label>
+                      <label for="parking" tabindex="0" >Парковка</label>
                     </li>
                     <li class="filter-option">
                       <input class="visually-hidden filter-input-checkbox" type="checkbox" name="" id="wifi"> 
-                      <label for="wifi">WI-FI</label>
+                      <label for="wifi" tabindex="0">WI-FI</label>
                     </li>
                   </ul>
                 </fieldset>
@@ -52,19 +52,19 @@
                   <ul class="infrastructure-list">
                     <li class="filter-option">
                       <input class="visually-hidden filter-input-checkbox" type="checkbox" name="" id="search-hotel"checked> 
-                      <label for="search-hotel">Гостиница</label>
+                      <label for="search-hotel" tabindex="0">Гостиница</label>
                     </li>
                     <li class="filter-option">
                       <input class="visually-hidden filter-input-checkbox" type="checkbox" name="" id="search-motel"checked> 
-                      <label for="search-motel">Мотель</label>
+                      <label for="search-motel" tabindex="0">Мотель</label>
                     </li>
                     <li class="filter-option">
                       <input class="visually-hidden filter-input-checkbox" type="checkbox" name="search-apartments" id="search-apartments"checked> 
-                      <label for="search-apartments">Апартаменты</label>
+                      <label for="search-apartments" tabindex="0">Апартаменты</label>
                     </li>
                   </ul>
                 </fieldset>
-                <div class="contaiter-button"> <!--Чтобы кнопка не вываливалась их флекса class="infrastructure"-->
+                <div class="contaiter-button"> 
                   <fieldset class="filter-item">
                     <legend>Стоимость в сутки (Р):</legend>
                       <div class="range-filter">
@@ -209,7 +209,7 @@
           <p class="footer-phone">Тел: <a href="tel:+74956660166">+7 (495) 666-01-66</a></p>
         </section>
         <section class="footer-icons">
-          <ul class="footer-social">  <!--список при переполнении вылазиет из ячейки грида-->
+          <ul class="footer-social">  
             <li>
               <a class="social-button" href="#">
                 <span class="visually-hidden">Твитер</span>

@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap"
     rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
 </head>
 
 <body class="page-body">
@@ -40,7 +40,7 @@
         <ol class="features-list">
           <li class="feature-item-blue">
             <div class="feature-item-conteiner">
-              <h2>Настоящий<br> городок</h2>   <!--Добавила БР, т.к. учеличила ширину H2 - чтобы при переполнении текст лучше смотрелся-->
+              <h2>Настоящий<br> городок</h2>   
               <p class="feature-item-number"> -№1 -</p>
               <p>Седона-не атракцион для туристов, там течет своя жизнь</p>
             </div>
@@ -93,18 +93,18 @@
         <a class="choice-button" href="blank.html">Поиск гостиницы в Седоне</a>
   
        <div class="modal">
-            <form class="modal-search" action="" method="GET">
+            <form class="modal-search" action="https://echo.htmlacademy.ru/" method="POST">
               <div class="arrival">
                 <label for="data-arrival">Дата заезда:</label>
                 <div class="container-calendar">
-                  <input id="data-arrival" type="text" name="date">  
+                  <input id="data-arrival" type="text" name="date" placeholder="24 апреля 2017">  
                   <button type="button" class="calendar"></button>
                 </div>
               </div>
               <div class="departure">
                 <label for="data-departure">Дата выезда:</label>
                 <div class="container-calendar">
-                  <input id=data-departure type="text" name="date">
+                  <input id=data-departure type="text" name="date" placeholder="4 июля 2017">
                   <button type="button" class="calendar"></button>
               </div>
               </div>
@@ -186,49 +186,10 @@
         </section>
       </div>
     </footer>
-<!------------------------------Всплывающее окно поиска-->
 
-<!--    <section class="modal">
-      <form class="modal-search" action="" method="GET">
-        <div class="arrival">
-          <label for="data-arrival">Дата заезда:</label>
-          <div class="container-calendar">
-            <input id="data-arrival" type="text" name="date">  
-            <button type="button" class="calendar"></button>
-          </div>
-        </div>
-        <div class="departure">
-          <label for="data-departure">Дата выезда:</label>
-          <div class="container-calendar">
-            <input id=data-departure type="text" name="date">
-            <button type="button" class="calendar"></button>
-        </div>
-        </div>
-        <div class="quantity">
-          <div class="quantity-parents">
-            <label for="parents">Взрослые:</label>
-            <div class="container-quantity">
-              <button type="button"  class="quantity-minus"></button>
-              <input id="parents" type="number" min="1" max="50" step="1" id="parents" name="parents" value="2">
-              <button type="button"  class="quantity-plus"></button>
-          </div>
-          </div>
-          <div class="quantity-children">
-            <label for="children">Дети:</label>
-            <div class="container-quantity">
-              <button type="button"  class="quantity-minus"></button>
-              <input id="children" type="number" min="0" max="50" step="1" id="children" name="children" value="0">
-              <button type="button"  class="quantity-plus"></button>
-            </div>
-          </div>
-        </div>
-        
-          <button class="modal-trip" type="submit">Найти</button>
-      </form>
-    </section> -->
   </div>
 
-  <script src="js/choice.js"></script>
+  <script src="js/choice.min.js"></script>
 
 </body>
 

@@ -84,11 +84,10 @@
 
   .site-navigation{
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 240px 240px 240px 240px; Сделать лоя каждого ЛИ грид-ария? */
+    grid-template-columns: repeat(5, 1fr); 
     gap: 10px 0px;
     list-style-type: none;
-    text-align: center;
-    margin: 15px 0px;
+    margin: 15px 72px;
     padding: 0;
   }
 
@@ -97,21 +96,25 @@
   grid-column-start: 4;
 }
 
-.site-navigation li:nth-of-type(4),
-.site-navigation li:nth-of-type(8){
-  grid-column-start: 5;
+.site-navigation li:nth-of-type(3),:nth-of-type(4),
+:nth-of-type(7),:nth-of-type(8){
+  justify-self: end;
 }
 
   .site-navigation a{
     color: var(--basic-black);
   }
 
-  .site-navigation a:hover {
+  .site-navigation a:hover:not(.open) {
     color: var(--basic-blue-rest);
   }
 
-  .site-navigation a:active {
+  .site-navigation a:active:not(.open) {
     color: var(--basic-gray-rest);
+  }
+
+  .site-navigation .open{
+    color: var(--basic-brown-focus);
   }
 
   .welcome {
@@ -168,14 +171,6 @@
     font-size: 21px;
     line-height: 26px;
   }
-
-/*   .features p{
-    max-width: 700px;
-    font-size: 14px;
-    line-height: 26px;
-    text-align: center;
-    margin: 0 auto;
-  } */
 
   .features-list h2, .features-list h3 {
     min-width: 159px;
@@ -281,18 +276,16 @@
   line-height: 26px;
   font-weight: 700;
   animation: bounce 0.6s;
+  transform-origin: top center;
 }
 
 .modal-hidden {
   display: none;
 } 
 
-/* .modal-show {
-  display: block;
-  width: 568px;
-  position: absolute;
-  
-} */
+.modal-error {
+  animation: shake 0.6s;
+}
 
 .modal-search {
   display: flex;
@@ -300,20 +293,30 @@
   padding: 55px;
 }
 
-/* .arrival input,
-.departure input{
-  width: 346px;
-  height: 38px;
-  background-color: var(--basic-gray-rest);
-  border: none;
-} */
-
 .container-calendar input{  
+  size: 14px;
+  line-height: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-left: 13px;
   position: relative;
   width: 346px;
   height: 38px;
   background-color: var(--basic-gray-rest);
   border: none;
+}
+
+.container-calendar input::placeholder{
+  color: var(--basic-black);
+}
+
+.container-calendar input:hover{
+  background-color: var(--basic-gray-focus);
+}
+
+.container-calendar input:focus{
+  background-color: var(--basic-white);
+  outline: solid 2px var(--basic-gray-focus);
 }
 
 .calendar{
@@ -337,10 +340,6 @@
 .container-calendar .calendar:active {
   background-image: url(../img/calendar-blue.svg);
 } 
-
-/* .container-calendar input:active ~.calendar {
-  background-image: url(../img/calendar-blue.svg);
-} */
 
 .container-calendar {
   display: flex;
@@ -368,7 +367,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 .quantity-parents {
@@ -393,7 +392,7 @@
   height: 38px;
   padding-left: 13px;
   padding-right: 13px;
-  margin-left: 36px;
+  margin-left: 25px;
 }
 
 .container-quantity input{  
@@ -402,7 +401,7 @@
   font-weight: 700;      
   width: 30px;   
   text-align: center;                       
- background-color: var(--basic-gray-rest);
+  background-color: var(--basic-gray-rest);
   border: none;
 }
 
@@ -476,16 +475,13 @@
 
 /*-----------------------------анимация модального окна*/
 @keyframes bounce {
+
   0% {
-    transform: translateY(-90px);
+    transform: translateY(-60px);
   } 
 
   70% {
     transform: translateY(10px);
-  }
-
-  90% {
-    transform: translateY(-10px);
   }
 
   100% {
@@ -493,6 +489,27 @@
   }
 }
 
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
 /*-------------------------------------------------------подвал*/
 .main-footer{
   position: absolute;
@@ -609,7 +626,7 @@
 /*--------------------------------------------------------вторая страница */
 
 .search {
-  padding: 26px 73px 32px 73px;   /*оставить такие падинги для секции? Земеряла по макету. Или так не надо делать?*/
+  padding: 26px 73px;  
   background-image: url(../img/background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -637,7 +654,6 @@
   top: 0px;
   width: 21px;
   height: 21px;
-  /*border: 3px solid var(--basic-white);*/
   background-image: url(../img/checkbox-off.svg);
   background-repeat: no-repeat;
   background-size: 100%;
@@ -683,13 +699,17 @@
   padding-top: 23px;
 }
 
+.infrastructure-list label{
+  width: 136px;
+}
+
 .filter-item{
   padding: 0;
   border: none;
 }
 
 .filter-item-indent {
-  margin-right: 115px;
+  margin-right: 75px;
 }
 
 .filter-item-dig {
@@ -784,7 +804,7 @@
   border: none;
 }
 
-.price-controls input[type='number'] {              /*может input сделать текстом? */
+.price-controls input[type='number'] {              
   -moz-appearance:textfield;
 }
 
@@ -820,7 +840,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   align-items: baseline;
-  padding: 0px 73px;                      /* тоже падинги по макету. Остаить или убрать?*/
+  padding: 0px 73px;                     
 }
 
 .found-sorting {
@@ -858,7 +878,7 @@
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
-  margin: 30px 0px;
+  margin: 32px 0px;
 }
 
 .sorting-main {
@@ -874,6 +894,7 @@
 
 .sorting-notmain:hover{
   color: var(--basic-blue-rest);
+  opacity: 1;
 }
 
 .sorting-notmain:active{
@@ -893,7 +914,6 @@
   margin-right: 5px;
   background-image: url(../img/icon-up-grey.svg);
   background-size: cover;
- /*  outline: none;                      делает невидимой для навигации Табом*/
 }
 
 .found-button .found-button-up:hover{
@@ -904,13 +924,11 @@
 .found-button .found-button-up:active{
   background-image: url(../img/icon-up-blue.svg);
   background-repeat: no-repeat;
-  /* outline: none;                                       */
 }
 
 .found-button .found-button-down {
   background-image: url(../img/icon-down-grey.svg);
   background-size: cover;
-  /* outline: none; */
 }
 
 .found-button .found-button-down:hover{
@@ -921,7 +939,6 @@
 .found-button .found-button-down:active{
   background-image: url(../img/icon-down-blue.svg);
   background-repeat: no-repeat;
-  /* outline: none; */
 }
 
 .all-hotels {
@@ -933,12 +950,15 @@
 .hotel-container {
   display: flex;
   flex-direction: row;
-  padding: 25px 73px;                   /* -----------------------------падинги по макету*/
+  padding: 30px 73px;           
   border-bottom: 1px solid var(--basic-gray-line);
 }
 
 .hotel-foto{
   display: flex;
+  width: 135px;
+  height: 90px;
+  object-fit: contain;
 }
 
 .hotel-name {
@@ -984,7 +1004,7 @@
   font-size: 14px;
   line-height: 21px; 
   margin:0;
-  padding-bottom: 18px;
+  padding-bottom: 12px;
 }
 
 .details {
