@@ -640,7 +640,7 @@ img {
 /*--------------------------------------------------------вторая страница */
 
 .search {
-  padding: 26px 73px;  
+  padding: 28px 73px;  
   background-image: url(../img/background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -893,7 +893,7 @@ img {
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
-  margin: 32px 0px;
+  margin: 25px 0px 35px;
 }
 
 .sorting-main {
@@ -965,7 +965,7 @@ img {
 .hotel-container {
   display: flex;
   flex-direction: row;
-  padding: 30px 73px;           
+  padding: 25px 73px 30px;           
   border-bottom: 1px solid var(--basic-gray-line);
 }
 
@@ -974,6 +974,7 @@ img {
   width: 135px;
   height: 90px;
   object-fit: contain;
+  margin-top: 5px;
 }
 
 .hotel-name {
@@ -1014,13 +1015,14 @@ img {
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
+  vertical-align: 5px;
 }
 
 .hotel-selection {
   font-size: 14px;
   line-height: 21px; 
   margin:0;
-  padding-bottom: 12px;
+  padding-bottom: 17px;
 }
 
 .details {
