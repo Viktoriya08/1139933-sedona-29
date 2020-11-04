@@ -49,7 +49,7 @@ img {
   width: 1px;
   height: 1px;
   margin: -1px;
-  border: o;
+  border: 0;
   padding: 0;
   white-space: nowrap;
   clip-path: inset(100%);
@@ -86,7 +86,7 @@ img {
 .site-navigation {
   display: grid;
   /* grid-template-columns: repeat(4, 1fr); */
-  grid-template-columns: 230px 230px 135px 230px 230px;
+  grid-template-columns: 230px 230px 139px 230px 227px;
   gap: 10px 0px;
   list-style-type: none;
   margin: 15px 72px;
@@ -125,8 +125,8 @@ img {
   width: 1200px;
   text-align: center;
   padding-top: 77px;
-  padding-bottom: 80px;
-  background-image: url(../img/background-botton.png), url("../img/background_photo.jpg");
+  padding-bottom: 75px;
+  background-image: url(../img/background-botton.png), url("../img/background-photo.jpg");
   background-repeat: no-repeat, no-repeat;
   background-position: bottom, top ;
   background-color: var(--basic-gray-focus);
@@ -135,7 +135,7 @@ img {
 
 .features {
   text-align: center;
-  padding-top: 35px;
+  padding-top: 40px;
 }
 
 .feature-heading p {
@@ -143,7 +143,7 @@ img {
 }
 
 .features-list {
-  margin-top: 51px;
+  margin-top: 52px;
   display: grid;
   grid-template-columns: 400px 400px 400px;
   list-style-type: none;
@@ -161,7 +161,10 @@ img {
   display: flex;
   flex-direction: column;
   align-content: center;
-  margin: auto;
+  margin: 0;
+  justify-content: space-between;
+  padding-top: 47px;
+  padding-bottom: 53px;
 }
 
 .feature-bridge {
@@ -180,9 +183,10 @@ img {
 .features-list h2,
 .features-list h3 {
   min-width: 159px;
-  margin: auto;
+  margin: 0;
   font-size: 21px;
   line-height: 21px;
+  padding-bottom: 25px;
 }
 
 .features-list p {
@@ -195,8 +199,7 @@ img {
 }
 
 .features-list .feature-item-number {
-  margin-top: 28px;
-  margin-bottom: 25px;
+  padding-bottom: 24px;
 }
 
 .feature-item-blue {
@@ -210,11 +213,15 @@ img {
   align-items: center;
   background-color: var(--basic-white);
   padding-top: 60px;
-  padding-bottom: 82px;
+  padding-bottom: 83px;
 }
 
 .feature-item-white h3 {
-  padding: 25px 40px;
+  padding: 28px 40px;
+}
+
+.feature-item-white img {
+  height: 70px;
 }
 
 .feature-item-grey {
@@ -223,7 +230,7 @@ img {
   align-items: center;
   background-color: var(--basic-gray);
   padding-top: 47px;
-  padding-bottom: 51px;
+  padding-bottom: 55px;
 }
 
 .choice {
@@ -242,7 +249,7 @@ img {
   font-size: 14px;
   line-height: 24px;
   width: 435px;     
-  margin: 35px auto 43px;
+  margin: 33px auto 43px;
 }
 
 .choice-button{
@@ -328,7 +335,7 @@ img {
 
 .calendar{
   position: absolute;
-  right: 55px;
+  right: 54px;
   width: 25px;
   height: 25px;
   border: none;
@@ -359,7 +366,7 @@ img {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 26px;
+  margin-bottom: 27px;
 }
 
 .departure {
@@ -367,14 +374,14 @@ img {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 29px;
 }
 
 .quantity {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-bottom: 52px;
+  margin-bottom: 54px;
 }
 
 .quantity-parents {
@@ -426,11 +433,11 @@ img {
 }
 
 .quantity-plus{
-  width: 15px;
-  height: 15px;
+  width: 11px;
+  height: 11px;
   background-image: url(../img/icon-plus-grey.svg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   border: none;
   cursor: pointer;
 }
@@ -444,8 +451,8 @@ img {
 }
 
 .quantity-minus {
-  width: 15px;
-  height: 15px;
+  width: 11px;
+  height: 11px;
   background-image: url(../img/icon-minus-grey.svg);
   background-repeat: no-repeat;
   background-size: 100%;
@@ -528,18 +535,17 @@ img {
   bottom: 0px;
   color: var(--basic-black);
   background-color: rgba(255, 255, 255, 0.9);
-  padding: 36px 0px;
 }
 
 .page-footer {
   width: 1200px;
-  padding-top: 23px;
-  padding-bottom: 36px;
+  padding-top: 22px;
+  padding-bottom: 42px;
 }
 .footer-container {
   display: grid;
   grid-template-columns:  1fr 1fr 1fr;
-  padding: 0px 50px;
+  padding: 0px 53px;
 }
 
 .footer-contacts {
@@ -559,7 +565,8 @@ img {
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
-   margin: 10px 0px 0px 0px;
+  padding-top: 8px;
+  margin: 0;
 }
 
 .footer-visit {
@@ -568,7 +575,7 @@ img {
 
 .footer-icons {
   text-align: center;
-  margin-top: 15px;
+  padding-top: 14px;
 }
 
 .footer-social{
@@ -583,7 +590,7 @@ img {
 
 .footer-social li {
   position: relative;
-  margin-right: 6px;
+  padding: 0px 3px;
 }
 
 .social-button{
@@ -608,7 +615,8 @@ img {
 }
 
 .footer-made {
-  margin-top: 20px;
+ /*  margin-top: 20px; */
+ padding-top: 16px;
 }
 
 .footer-copyright{
@@ -640,7 +648,7 @@ img {
 /*--------------------------------------------------------вторая страница */
 
 .search {
-  padding: 28px 73px;  
+  padding: 27px 70px;  
   background-image: url(../img/background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -652,6 +660,7 @@ img {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  padding-bottom: 4px;
 }
 
 .filter-option label{
@@ -666,19 +675,19 @@ img {
   content: "";
   position: absolute;
   left: 1px;
-  top: 0px;
-  width: 21px;
-  height: 21px;
+  top: 1px;
+  width: 23px;
+  height: 23px;
   background-image: url(../img/checkbox-off.svg);
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: contain;
 }
 
 .filter-input-checkbox:disabled + label::before {
   content: "";
   background-image: url(../img/checkbox-off-block.svg);
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: contain;
 }
 
 .filter-input-checkbox:checked + label::before,
@@ -690,19 +699,19 @@ img {
   content: "";
   position: absolute;
   left: 1px;
-  top: 0px;
+  top: 2px;
   width: 25px;
   height: 25px;
   background-image: url(../img/checkbox-on.svg);
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: contain;
 }
 
 .filter-input-checkbox:disabled + label::after {
   content: "";
   position: absolute;
   left: 1px;
-  top: 0px;
+  top: 2px;
   width: 25px;
   height: 25px;
   background-image: url(../img/checkbox-on-block.svg);
@@ -710,8 +719,12 @@ img {
   background-size: 100%;
 }
 
+.filter-input-checkbox:focus+label {
+  outline: auto;
+}
+
 .infrastructure-list li{
-  padding-top: 23px;
+  padding-top: 22px;
 }
 
 .infrastructure-list label{
@@ -724,7 +737,7 @@ img {
 }
 
 .filter-item-indent {
-  margin-right: 75px;
+  margin-right: 78px;
 }
 
 .filter-item-dig {
@@ -753,8 +766,7 @@ img {
 .range-controls {
   position: relative;
   height: 36px;
-
-  padding-top: 18px;
+  padding-top: 20px;
 }
 
 .range-controls .toggle {
@@ -794,17 +806,22 @@ img {
 
 .price-controls {
   border: 2px solid var(--basic-white);
-  text-align: center;
+  /* text-align: center; */
   border-radius: 2px;
-  padding: 5px;
+  padding: 4px;
 }
 
 .price-controls .min-price {
+  padding-left: 62px;
   border-right: 2px solid var(--basic-white);
 }
 
+.price-controls .min-price input {
+  padding-right: 8px;
+}
+
 .price-controls label{
-  margin-left: 50px;
+  padding-left: 52px;
 }
 
 .price-controls input{
@@ -854,8 +871,9 @@ img {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: baseline;
-  padding: 0px 73px;                     
+  align-items: center;
+  /* padding: 0px 73px;                      */
+  padding: 6px 73px 12px 73px;
 }
 
 .found-sorting {
@@ -884,7 +902,8 @@ img {
 }
 
 .sorting {
-  margin-right: 40px;
+  margin: 0;
+  padding-right: 40px;
   font-size: 12px;
   line-height: 18px; 
 }
@@ -893,7 +912,7 @@ img {
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
-  margin: 25px 0px 35px;
+  /* margin: 27px 0px 33px; */
 }
 
 .sorting-main {
@@ -918,40 +937,46 @@ img {
   opacity: 1;
 }
 
-.found-button button{
+.found-arrow {
+  margin-top: 8px;
+}
+
+.found-arrow button{
   width: 11px;
   height: 10px;
   background: none;
   border: none;
 }
 
-.found-button .found-button-up {
+.found-arrow .found-up {
   margin-right: 5px;
   background-image: url(../img/icon-up-grey.svg);
-  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
-.found-button .found-button-up:hover{
+.found-arrow .found-up:hover{
   background-image: url(../img/icon-up-black.svg);
   background-repeat: no-repeat;
 }
 
-.found-button .found-button-up:active{
+.found-arrow .found-up:active{
   background-image: url(../img/icon-up-blue.svg);
   background-repeat: no-repeat;
 }
 
-.found-button .found-button-down {
+.found-arrow .found-down {
   background-image: url(../img/icon-down-blue.svg);
-  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
-.found-button .found-button-down:hover{
+.found-arrow .found-down:hover{
   background-image: url(../img/icon-down-black.svg);
   background-repeat: no-repeat;
 }
 
-.found-button .found-button-down:active{
+.found-arrow .found-down:active{
   background-image: url(../img/icon-down-blue.svg);
   background-repeat: no-repeat;
 }
@@ -965,7 +990,7 @@ img {
 .hotel-container {
   display: flex;
   flex-direction: row;
-  padding: 25px 73px 30px;           
+  padding: 23px 73px 30px;           
   border-bottom: 1px solid var(--basic-gray-line);
 }
 
@@ -974,7 +999,7 @@ img {
   width: 135px;
   height: 90px;
   object-fit: contain;
-  margin-top: 5px;
+  margin-top: 7px;
 }
 
 .hotel-name {
@@ -1003,7 +1028,7 @@ img {
   display: flex;
   flex-direction: row;
   flex-grow: 1;
-  margin-top: 7px;
+  margin-top: 9px;
 }
 
 .hotel-name-price {
@@ -1028,7 +1053,7 @@ img {
 .details {
   color: var(--basic-white);
   background-color: var(--basic-blue-rest);
-  padding: 3px 17px;
+  padding: 3px 17px 4px 17px;
 }
 
 .hotel-name-price .details:hover{
@@ -1043,7 +1068,7 @@ img {
 .reservation {
   color: var(--basic-white);
   background-color: var(--basic-brown-rest);
-  padding: 3px 17px;
+  padding: 3px 17px 4px 17px;
 }
 
 .hotel-name-details .reservation:hover{
@@ -1066,6 +1091,10 @@ img {
   color: var(--basic-gray-reseption);
   background-color: var(--basic-gray-rest);
   display: block;
-  padding: 3px 15px;
+  padding: 1px 12px 1px 15px;
   margin: 0;
+}
+
+.container-stars {
+  margin: 6px 0px 0px 0;
 }
